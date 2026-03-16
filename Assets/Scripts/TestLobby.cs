@@ -404,60 +404,6 @@ public class TestLobby : MonoBehaviour
 
 
 
-    //Since Code monkey likes to use Quantum Console and I can't afford it, I went ahead here and made some alternative testing methods (partly for demonstrative purposes)
-
-    //here weve made a function for pressing the "L" key to call the function
-
-    //I've also added a UI button to the scene calling the function - this requires making the actual TestLobbyParent game object and attaching the script.
-
-    //Button
-    //→ OnClick()
-    //→ Drag TestLobby object
-    //→ Select CreateLobby()
-
-    //And since I've been using the "InGameDebugConsole" to subtitute for "Quantum Console" 
-    //they provide a similar method to code monkeys "[Command] attribute from QC, IGDC has 
-    //[ConsoleMethod("createlobby", "Creates a test lobby")]
-
-    //Now i can just call createlobby in the InGame Debug Console Asset
-
-    /*
-    //this may also be a coroutine?
-    //He metions rate limits on polling and i think this might be why?
-    private async void HandleLobbyPollForUpdates()
-    {
-        if (joinedLobby != null)
-        {
-            lobbyUpdatetimer -= Time.deltaTime;
-            if (lobbyUpdatetimer < 0f)
-            {
-                float lobbyUpdatetimerMax = 1.1f;
-                lobbyUpdatetimer = lobbyUpdatetimerMax;
-
-                Lobby lobby = await LobbyService.Instance.GetLobbyAsync(joinedLobby.Id);
-                joinedLobby = lobby;
-            }
-        }
-    }
-
-
-
-    //converted this to a coroutine
-    private async void HandleLobbyHeartbeat()
-    {
-        if (hostLobby != null)
-        {
-            heartbeatTimer -= Time.deltaTime;
-            if (heartbeatTimer < 0)
-            {
-                float heartbeatTimerMax = 15;
-                heartbeatTimer = heartbeatTimerMax;
-
-                await LobbyService.Instance.SendHeartbeatPingAsync(hostLobby.Id);
-            }
-        }
-    }
-    */
 
 
 }
